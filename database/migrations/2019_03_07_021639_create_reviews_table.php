@@ -13,7 +13,7 @@ class CreateReviewsTable extends Migration
      */
     public function up()
     {
-        Schema::create('review', function (Blueprint $table) {
+        Schema::create('reviews', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('product_id')->unsigned()->index()->change();
             $table->integer('product_id')->references('id')->on('products')->onDelete('cascade');
